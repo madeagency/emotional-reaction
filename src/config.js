@@ -1,6 +1,7 @@
 module.exports = {
-  title: 'Reactivity',
-  description: 'A Bleeding Edge React Universal Boilerplate for Power Users.',
+  title: 'Emotional Reaction',
+  description:
+    'A Bleeding Edge React Universal Boilerplate for Power Users -- with Emotion.',
   head: {
     meta: [
       { charset: 'utf-8' },

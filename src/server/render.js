@@ -6,11 +6,13 @@ import {
   wrapRootEpic
 } from 'react-redux-epic'
 import { renderToNodeStream } from 'react-dom/server'
+import { renderStylesToNodeStream } from 'emotion-server'
 import { flushChunkNames } from 'react-universal-component/server'
 import flushChunks from 'webpack-flush-chunks'
-import configureStore from '../redux/configureStore'
-import App from '../containers/App/App'
-import Html from '../helpers/Html'
+
+import configureStore from 'reducers/configureStore'
+import App from 'containers/App'
+import Html from 'helpers/Html'
 
 export default ({ clientStats }) => (req, res) => {
   const { wrappedEpic, store } = configureStore(wrapRootEpic)
@@ -31,18 +33,12 @@ export default ({ clientStats }) => (req, res) => {
     }))
     .subscribe(({ markup, data }) => {
       const chunkNames = flushChunkNames()
-      const { scripts, stylesheets, cssHashRaw } = flushChunks(clientStats, {
+      const { scripts } = flushChunks(clientStats, {
         chunkNames
       })
       const html = renderToNodeStream(
-        <Html
-          styles={stylesheets}
-          cssHash={cssHashRaw}
-          js={scripts}
-          component={markup}
-          state={data}
-        />
-      )
+        <Html js={scripts} component={markup} state={data} />
+      ).pipe(renderStylesToNodeStream())
 
       switch (reactRouterContext.status) {
         case 301:

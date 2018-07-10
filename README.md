@@ -1,20 +1,7 @@
-# Reactivity
+# Emotional Reaction
 
-A Bleeding Edge React Universal Boilerplate for Power Users.
-
-[![Code Climate](https://codeclimate.com/repos/598770109f7dbb02640013d9/badges/dac168d1b640d9ab7e3e/gpa.svg)](https://codeclimate.com/repos/598770109f7dbb02640013d9/feed) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md#pull-request-process) [![Dependency Status](https://david-dm.org/madeagency/reactivity.svg)](https://david-dm.org/madeagency/reactivity) [![devDependency Status](https://david-dm.org/madeagency/reactivity/dev-status.svg)](https://david-dm.org/madeagency/reactivity#info=devDependencies) [![Greenkeeper badge](https://badges.greenkeeper.io/madeagency/reactivity.svg?token=ddba641b3d2a0d2bf1c8abc674cebd3b48a8383755bb7b02fd3cf1878f86de9a&ts=1502800234197)](https://greenkeeper.io/)
-
-What is Reactivity? Well at its most basic definition it is how easily an atom has a chemical reaction with another element. Our goal is to achieve stable valence levels, a full valence shell if you will.
-
-But really it's just a boilerplate.
-
-Because that's what's missing in the React realm right?
-
-Well see we need a boilerplate for people who want to be able to tweak every atom of an application and a simple boilerplate that doesn't contain any magic or code generation that takes pages of documentation to learn how to override, it's a boilerplate for power users.
-
-#### View our [Example App Here](https://reactivity.now.sh)
-
-Deployed using [now](https://zeit.co/now) like so `now --public --dotenv=.env`
+A Bleeding Edge React Universal Boilerplate for Power Users -- with Emotion.
+This is a fork of our other boilerplate, [Reactivity](https://github.com/madeagency/emotional-reaction.git).
 
 ## Features
 
@@ -27,16 +14,15 @@ Whats unique about this boilerplate however is:
 - PWA Ready.
 - No scaffolding tools.
 - No Automated service worker generation, you get to write your own. - *(thanks to [serviceworker-webpack-plugin](https://github.com/oliviertassinari/serviceworker-webpack-plugin))*
+- Styled components - *(thanks to [emotion](https://github.com/emotion-js/emotion))*
 
 ## Getting Started
 
-If you haven't yet start by installing [yarn](https://yarnpkg.com/en/).
-
-1. Clone this repo using `git clone --depth=1 https://github.com/madeagency/reactivity.git`
-2. Move to the appropriate directory: `cd reactivity`.
+1. Clone this repo using `git clone --depth=1 https://github.com/madeagency/emotional-reaction.git`
+2. Move to the appropriate directory: `cd emotional-reaction`.
 3. Copy the `.sample.env` to `.env` and change any details as required.
-4. Run `yarn install` in order to install dependencies.
-5. Run `yarn dev` for development mode or `yarn prod` for production mode and you will see the app running at `http://localhost:[PORT_SPECIFIED_IN_.ENV]`.
+4. Run `npm install` in order to install dependencies.
+5. Run `npm run dev` for development mode or `npm run prod` for production mode and you will see the app running at `http://localhost:[PORT_SPECIFIED_IN_.ENV]`.
 
 ## Development suggestions
 
@@ -47,8 +33,8 @@ If you haven't yet start by installing [yarn](https://yarnpkg.com/en/).
 
 This will largely vary however heres a super simple overview.
 
-1. Run `yarn build`
-2. Run either `yarn start` or `node bin/server.prod.js` to start the application.
+1. Run `npm run build`
+2. Run either `npm run start` or `node bin/server.prod.js` to start the application.
 
 You could also run `start:prod` after step one to immediately launch the app after its been built.
 
@@ -58,15 +44,14 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 ## Authors
 
-* **Dawid** - *Initial work* - [dawidvdh](https://github.com/dawidvdh)
-* **Ross** - *Initial work* - [rocbear](https://github.com/rocbear)
+* **Francois** - *Emotion* - [fjlaubscher](https://github.com/fjlaubscher)
 
-See also the list of [contributors](https://github.com/madeagency/reactivity/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/madeagency/emotional-reaction/graphs/contributors) who participated in this project.
 
 License
 -------
 
-Reactivity is © 2017 MADE Code PTY Ltd.
+Emotional Reaction is © 2018 MADE Code PTY Ltd.
 It is free software, and may be redistributed under the terms specified in the [LICENSE] file.
 
 [LICENSE]: LICENSE
@@ -74,9 +59,9 @@ It is free software, and may be redistributed under the terms specified in the [
 Maintained by
 ----------------
 
-[![madeagency](https://www.made.co.za/logo.png)](https://www.made.co.za?utm_source=github)
+[![madeagency](https://www.madecode.co.za/logo.png)](https://www.made.co.za?utm_source=github)
 
-Reactivity was created and is maintained MADE Agency PTY Ltd.
+Emotional Reaction was created and is maintained MADE Code PTY Ltd.
 The names and logos for MADE Code are trademarks of MADE Code PTY Ltd.
 
 We love open source software. See our [Github Profile](https://github.com/madeagency) for more.

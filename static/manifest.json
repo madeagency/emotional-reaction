@@ -1,6 +1,6 @@
 {
-    "name": "Reactivity",
-    "short_name": "Reactivity",
+    "name": "Emotional Reaction",
+    "short_name": "Emotional Reaction",
     "start_url": "./",
     "icons": [
         {
@@ -14,7 +14,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "#FFC0CB",
+    "background_color": "#FFC0CB",
     "display": "standalone"
 }

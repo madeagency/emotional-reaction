@@ -22,7 +22,7 @@ const Home = () => (
       <li>Express</li>
       <li>Eslint</li>
       <li>Redux Form</li>
-      <li>Style and Sass Loader</li>
+      <li>Styled Components</li>
       <li>RXJS</li>
       <li>Service Worker</li>
     </ul>

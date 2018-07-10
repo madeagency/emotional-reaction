@@ -58,7 +58,7 @@
         "config": "./webpack/client.prod.js"
       },
       "node": {
-        "paths": ["node_modules", "src", "components", "reducers"]
+        "paths": ["node_modules", "src", "components", "containers", "reducers", "helpers", "styles"]
       },
       "flowtype": {
         "onlyFilesWithFlowAnnotation": true

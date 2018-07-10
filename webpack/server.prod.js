@@ -1,6 +1,8 @@
 const path = require('path')
 const webpack = require('webpack')
-const autoprefixer = require('autoprefixer')
+
+// aliases
+const alias = require('./alias')
 
 const res = p => path.resolve(__dirname, p)
 
@@ -25,26 +27,6 @@ module.exports = {
         use: 'babel-loader'
       },
       {
-        test: /\.scss$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: 'css-loader/locals',
-            options: {
-              modules: true,
-              localIdentName: '[name]__[local]--[hash:base64:5]'
-            }
-          },
-          'sass-loader',
-          {
-            loader: 'postcss-loader',
-            options: {
-              plugins: () => [autoprefixer({ browsers: 'last 2 versions' })]
-            }
-          }
-        ]
-      },
-      {
         test: /\.(jpg|png|gif|svg|ico)$/,
         use: [
           {
@@ -55,10 +37,7 @@ module.exports = {
     ]
   },
   resolve: {
-    alias: {
-      components: path.resolve(__dirname, '..', 'src/components/'),
-      reducers: path.resolve(__dirname, '..', 'src/redux/')
-    },
+    alias,
     extensions: ['.json', '.js', '.jsx']
   },
   plugins: [

@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Helmet from 'react-helmet'
-import TypicalFrom from 'components/TypicalForm/TypicalForm'
+import TypicalFrom from 'components/TypicalForm'
 import { fetchData } from 'reducers/neo'
 import type { Neo } from 'reducers/neo'
 

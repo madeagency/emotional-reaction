@@ -1,10 +1,11 @@
 const path = require('path')
 const webpack = require('webpack')
 const WriteFilePlugin = require('write-file-webpack-plugin')
-const ExtractCssChunks = require('extract-css-chunks-webpack-plugin')
 const Dotenv = require('dotenv-webpack')
-const autoprefixer = require('autoprefixer')
 const ServiceWorkerPlugin = require('serviceworker-webpack-plugin')
+
+// aliases
+const alias = require('./alias')
 
 module.exports = {
   name: 'client',
@@ -14,12 +15,12 @@ module.exports = {
   entry: [
     'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=false&quiet=false&noInfo=false',
     'react-hot-loader/patch',
-    path.resolve(__dirname, '../src/client.js')
+    path.resolve(__dirname, '..', 'src/client.js')
   ],
   output: {
     filename: '[name].js',
     chunkFilename: '[name].js',
-    path: path.resolve(__dirname, '../build'),
+    path: path.resolve(__dirname, '..', 'build'),
     publicPath: '/'
   },
   module: {
@@ -28,26 +29,6 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: 'babel-loader'
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          ExtractCssChunks.loader,
-          {
-            loader: 'css-loader',
-            query: {
-              modules: true,
-              localIdentName: '[name]__[local]--[hash:base64:5]'
-            }
-          },
-          'sass-loader',
-          {
-            loader: 'postcss-loader',
-            options: {
-              plugins: () => [autoprefixer({ browsers: 'last 2 versions' })]
-            }
-          }
-        ]
       },
       {
         test: /\.(jpg|png|gif|svg|ico)$/,
@@ -60,15 +41,11 @@ module.exports = {
     ]
   },
   resolve: {
-    alias: {
-      components: path.resolve(__dirname, '..', 'src/components/'),
-      reducers: path.resolve(__dirname, '..', 'src/redux/')
-    },
+    alias,
     extensions: ['.json', '.js', '.jsx']
   },
   plugins: [
     new WriteFilePlugin(),
-    new ExtractCssChunks(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.ProvidePlugin({

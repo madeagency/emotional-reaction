@@ -11,7 +11,13 @@ const Home = () => (
   <div>
     <Helmet
       title="Home"
-      meta={[{ name: 'description', content: 'Welcome to Reactivity' }]}
+      meta={[
+        {
+          name: 'description',
+          content:
+            'A Bleeding Edge React Universal Boilerplate for Power Users — with Emotion.'
+        }
+      ]}
     />
     <h1>What is it really?</h1>
     <p>

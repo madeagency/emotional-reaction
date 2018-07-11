@@ -1,5 +1,8 @@
 # Emotional Reaction
 
+[![CircleCI](https://circleci.com/gh/madeagency/emotional-reaction.svg?style=svg)](https://circleci.com/gh/madeagency/emotional-reaction)
+[![Maintainability](https://api.codeclimate.com/v1/badges/39b5868c71acb83339af/maintainability)](https://codeclimate.com/repos/5b45b823c4372a023f006b1a/maintainability)
+
 A Bleeding Edge React Universal Boilerplate for Power Users — with Emotion.
 This is a fork of our other boilerplate, [Reactivity](https://github.com/madeagency/emotional-reaction.git).
 
@@ -61,7 +64,7 @@ It is free software, and may be redistributed under the terms specified in the [
 Maintained by
 ----------------
 
-[![madeagency](https://www.madecode.co.za/logo.png)](https://www.made.co.za?utm_source=github)
+[![madeagency](https://www.made.co.za/logo.png)](https://www.made.co.za?utm_source=github)
 
 Emotional Reaction was created and is maintained MADE Code PTY Ltd.
 The names and logos for MADE Code are trademarks of MADE Code PTY Ltd.

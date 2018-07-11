@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/reactivity
+    working_directory: ~/emotional-reaction
     docker:
       - image: circleci/node:8.2.1
     steps:
@@ -32,9 +32,9 @@ jobs:
           command: greenkeeper-lockfile-upload
 
   deploy_dev:
-    working_directory: ~/reactivity
+    working_directory: ~/emotional-reaction
     docker:
-      - image: circleci/node:8.2.1
+      - image: circleci/node:8.11.3
     steps:
       - checkout
       - run:
@@ -46,15 +46,15 @@ jobs:
       - run:
           name: Deploy Development
           command: URL=$(now -t ${NOW_TOKEN} --public --dotenv=.sample.env)
-            now -t ${NOW_TOKEN} alias set ${URL} reactivity-dev.now.sh
+            now -t ${NOW_TOKEN} alias set ${URL} emotional-reaction-dev.now.sh
       - run:
           name: Purge Now.sh
-          command: now-purge -t ${NOW_TOKEN} -n reactivity
+          command: now-purge -t ${NOW_TOKEN} -n emotional-reaction
 
   deploy_prod:
-    working_directory: ~/reactivity
+    working_directory: ~/emotional-reaction
     docker:
-      - image: circleci/node:8.2.1
+      - image: circleci/node:8.11.3
     steps:
       - checkout
       - run:
@@ -67,10 +67,10 @@ jobs:
           name: Deploy Production
           command: |
             URL=$(now -t ${NOW_TOKEN} --public --dotenv=.sample.env)
-            now -t ${NOW_TOKEN} alias set ${URL} reactivity.now.sh
+            now -t ${NOW_TOKEN} alias set ${URL} emotional-reaction.now.sh
       - run:
           name: Purge Now.sh
-          command: now-purge -t ${NOW_TOKEN} -n reactivity
+          command: now-purge -t ${NOW_TOKEN} -n emotional-reaction
 
 workflows:
   version: 2

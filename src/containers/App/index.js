@@ -6,6 +6,7 @@ import styled from 'react-emotion'
 import Switch from 'react-router-dom/Switch'
 import Route from 'react-router-dom/Route'
 import Helmet from 'react-helmet'
+import { colors } from 'styles'
 
 import Home from 'containers/Home'
 import Examples from 'containers/Examples'
@@ -24,10 +25,7 @@ injectGlobal([
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-  }
-
-  a {
-    color: darken(#61dafb, 40);
+    color: ${colors.charcoal};
   }
 `
 ])

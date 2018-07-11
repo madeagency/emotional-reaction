@@ -3,6 +3,9 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Link from 'react-router-dom/Link'
+import Anchor from 'components/Link'
+
+const StyledLink = Anchor.withComponent(Link)
 
 const Home = () => (
   <div>
@@ -28,8 +31,8 @@ const Home = () => (
     </ul>
 
     <p>
-      Take a look at our <Link to="/examples">Examples Page</Link> to see parts
-      of this in action.
+      Take a look at our <StyledLink to="/examples">Examples Page</StyledLink>{' '}
+      to see parts of this in action.
     </p>
   </div>
 )

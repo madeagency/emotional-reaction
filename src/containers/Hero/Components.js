@@ -23,7 +23,7 @@ export const Container = styled('div')`
 `
 
 export const Header = styled('div')`
-  background-color: ${colors.emotionalReaction};
+  background-color: ${colors.hotPink};
   padding: ${pxtorem(20)}rem;
   color: ${colors.charcoal};
 `
@@ -32,10 +32,12 @@ export const Heading = styled('h1')`
   font-size: 3rem;
   margin-top: 0.6rem;
   margin-bottom: 0;
+  text-decoration: ${({ strikethrough }) => strikethrough && 'line-through'};
+  opacity: ${({ strikethrough }) => strikethrough && '0.25'};
 `
 
 export const Paragraph = styled('p')`
-  color: ${colors.dustyGray};
+  color: ${colors.charcoal};
   font-size: 0.75rem;
 `
 

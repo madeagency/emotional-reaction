@@ -24,7 +24,7 @@ const renderApp = TheApp =>
 
 if (module.hot) {
   module.hot.accept('./containers/App/index.js', () => {
-    const theApp = require('./containers/App').default
+    const theApp = require('containers/App').default
     renderApp(theApp)
   })
 }

@@ -20,14 +20,9 @@ const Hero = () => (
   <Container>
     <Header>
       <Logo src={logo} alt="logo" />
-      <Heading>Reactivity</Heading>
-      <del>
-        <i>n.</i> The quality of being reactive or the degree to which something
-        is reactive.
-      </del>
-      <h2>
-        <i>n.</i> Boilerplate for Power Users.
-      </h2>
+      <Heading strikethrough>Reactivity</Heading>
+      <Heading>Emotional Reaction</Heading>
+      <h2>Boilerplate for Power Users — with Emotion.</h2>
       <p>
         <GithubLink
           href="https://github.com/madeagency/emotional-reaction"
@@ -40,7 +35,7 @@ const Hero = () => (
       <GithubButton
         title="Star this project on github"
         user="madeagency"
-        repo="reactivity"
+        repo="emotional-reaction"
         type="star"
         width={160}
         height={30}
@@ -50,7 +45,7 @@ const Hero = () => (
       <GithubButton
         title="Fork this project on github"
         user="madeagency"
-        repo="reactivity"
+        repo="emotional-reaction"
         type="fork"
         width={160}
         height={30}

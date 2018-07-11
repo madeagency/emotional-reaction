@@ -3,7 +3,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Helmet from 'react-helmet'
+
 import TypicalFrom from 'components/TypicalForm'
+import Link from 'components/Link'
+
 import { fetchData } from 'reducers/neo'
 import type { Neo } from 'reducers/neo'
 
@@ -37,7 +40,9 @@ class Examples extends Component<Props> {
       <div>
         <Helmet
           title="Examples"
-          meta={[{ name: 'description', content: 'Reactivity Examples' }]}
+          meta={[
+            { name: 'description', content: 'Emotional Reaction Examples' }
+          ]}
         />
         <h1>What can it do?</h1>
 
@@ -47,7 +52,7 @@ class Examples extends Component<Props> {
         </p>
         <p>
           For the moment this should suffice as a demonstration of what{' '}
-          <b>Reactivity</b> can do:
+          <del>Reactivity</del> <b>Emotional Reaction</b> can do:
         </p>
 
         <h3>
@@ -66,21 +71,21 @@ class Examples extends Component<Props> {
 
         <p>
           We use <b>RXJS</b> and the concept of{' '}
-          <a
+          <Link
             href="https://redux-observable.js.org/docs/basics/Epics.html"
             target="_blank"
             rel="noopener noreferrer"
           >
             Epics
-          </a>{' '}
+          </Link>{' '}
           for our asynchronous actions. Check{' '}
-          <a
-            href="https://github.com/madeagency/reactivity/blob/master/src/redux/reducers/neo.js"
+          <Link
+            href="https://github.com/madeagency/emotional-reaction/blob/master/src/redux/reducers/neo.js"
             target="_blank"
             rel="noopener noreferrer"
           >
             this file
-          </a>{' '}
+          </Link>{' '}
           which is responsible for fetching the above data.
         </p>
         <p>
@@ -100,13 +105,13 @@ class Examples extends Component<Props> {
           For this one your gonna need to open your network tab, and you will be
           able to see which chunks are being sent. You&apos;re currently viewing
           the{' '}
-          <a
-            href="https://github.com/madeagency/reactivity/blob/master/src/containers/Examples/index.js"
+          <Link
+            href="https://github.com/madeagency/emotional-reaction/blob/master/src/containers/Examples/index.js"
             target="_blank"
             rel="noopener noreferrer"
           >
             Examples chunk.
-          </a>
+          </Link>
         </p>
 
         <h3>
@@ -119,13 +124,13 @@ class Examples extends Component<Props> {
         <p>
           This Boilerplate currently passes all the PWA requirements of
           lighthouse and you can {'fully '}
-          <a
-            href="https://github.com/madeagency/reactivity/blob/master/src/sw.js"
+          <Link
+            href="https://github.com/madeagency/emotional-reaction/blob/master/src/sw.js"
             target="_blank"
             rel="noopener noreferrer"
           >
             customize the service worker
-          </a>{' '}
+          </Link>{' '}
           to suite the needs of your App.
         </p>
 

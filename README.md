@@ -1,6 +1,6 @@
 # Emotional Reaction
 
-A Bleeding Edge React Universal Boilerplate for Power Users -- with Emotion.
+A Bleeding Edge React Universal Boilerplate for Power Users — with Emotion.
 This is a fork of our other boilerplate, [Reactivity](https://github.com/madeagency/emotional-reaction.git).
 
 ## Features
@@ -44,7 +44,9 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 ## Authors
 
-* **Francois** - *Emotion* - [fjlaubscher](https://github.com/fjlaubscher)
+* **Francois** - *Initial work* - [fjlaubscher](https://github.com/fjlaubscher)
+* **Dawid** - *Reactivity* - [dawidvdh](https://github.com/dawidvdh)
+* **Ross** - *Reactivity* - [rocbear](https://github.com/rocbear)
 
 See also the list of [contributors](https://github.com/madeagency/emotional-reaction/graphs/contributors) who participated in this project.
 

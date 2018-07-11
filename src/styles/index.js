@@ -8,7 +8,7 @@ export const colors = {
   dustyGray: '#999999',
   malibu: '#61dafb',
   alto: '#DDDDDD',
-  emotionalReaction: '#FFC0CB'
+  hotPink: '#FF69B4'
 }
 
 export const breakpoints = {
